@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:06:24 by aelbouab          #+#    #+#             */
-/*   Updated: 2025/02/02 14:48:03 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/06 17:09:20 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_data
 	void	*win;
 	int		img_width;
 	int		img_height;
-	int		cp;
+	int		count;
 	char	**lines;
 }		t_data;
 
@@ -60,17 +60,17 @@ char	**floodfill(char **lines, int x, int y);
 char	*maps_s(char *line);
 void	flood_test(char **lines);
 void	name_error(char *name);
-void	drowing(char *maps);
+void	drawing(char *maps);
 t_data	ft_imgnew(t_data *img, void *mlx_ptr);
 int		move_player(int key, void *p);
-t_pos	player_pous(char **lines, int k);
+t_pos	player_pos(char **lines, int k);
 int		map_len(char **lines);
 int		line_len(char *lines);
-int		keychecker(char **lines);
-void	door_open(char **lines, t_data *map);
-int		fined_exit(char **lines);
+int		collectable_checker(char **lines)
+void	open_door(char **lines, t_data *map);
+int		find_exit(char **lines);
 void	len_check(char **lines);
-void	floor_drowing(char **lines, t_data *img);
+void	floor_drawing(char **lines, t_data *img);
 void	ft_putnbr(int n);
 void	clearbuf(char **lines);
 void	write_err(char *str);
@@ -97,11 +97,11 @@ void	flood_test_bonus(char **lines);
 char	*maps_s_bonus(char *line);
 void	parssing_bonus(char **lines, char *maps);
 t_data	ft_imgnew_bonus(t_data *img, void *mlx_ptr);
-void	drowing_bonus(char *maps);
+void	drawing_bonus(char *maps);
 t_data	ft_imgnew_bonus(t_data *img, void *mlx_ptr);
-void	floor_drowing_bonus(char **lines, t_data *img);
+void	floor_drawing_bonus(char **lines, t_data *img);
 int		move_player_bonus(int key, void *p);
-t_pos	player_pous_bonus(char **lines, int k);
+t_pos	player_pos_bonus(char **lines, int k);
 char	*ft_itoa(int n);
 int		monster_move(void *param);
 t_mdata	m_image(t_mdata *mon, void *mlx_ptr);
