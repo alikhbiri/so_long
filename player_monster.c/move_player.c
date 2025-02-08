@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:57:39 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/07 14:47:45 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/08 18:07:26 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,6 @@ int	move_player(int key, void *p)
 		exit (1);
 	i = collectable_checker(lines);
 	if (i == 0)
-		door_open(lines, map);
+		open_door(lines, map);
 	return (0);
 }

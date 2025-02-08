@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:06:24 by aelbouab          #+#    #+#             */
-/*   Updated: 2025/02/06 17:09:20 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/08 18:43:51 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,9 +106,9 @@ char	*ft_itoa(int n);
 int		monster_move(void *param);
 t_mdata	m_image(t_mdata *mon, void *mlx_ptr);
 void	name_error_bonus(char *name);
-void	animation(t_data *img);
-void	portal_an(t_data *img);
-void	player_drow_bonus(char **lines, t_data *img);
+// void	animation(t_data *img);
+// void	portal_an(t_data *img);
+void	player_draw_bonus(char **lines, t_data *img);
 void	cp_bonus(t_data *img);
 t_mpos	monster_pos(char **lines, int i);
 void	m_move_d(t_data	*img, int i);

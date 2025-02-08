@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:23:23 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 17:33:27 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/08 18:45:22 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void collectable_draw(char **lines, t_data *img)
     }
 }
 
-static void monster_draw(char **lines, t_data *img)
+static void monster_draw_bonus(char **lines, t_data *img)
 {
     int	j;
 	int	i;
@@ -99,7 +99,7 @@ static void    door_draw_bonus(char **lines, t_data *img)
     }
 }
 
-void	drawing(char *maps)
+void	drawing_bonus(char *maps)
 {
 	t_data	img;
 	void	*mlx_ptr;
@@ -113,7 +113,7 @@ void	drawing(char *maps)
 	door_draw_bonus(img.lines, &img);
 	player_draw_bonus(img.lines, &img);
 	collectable_draw_bonus(img.lines, &img);
-    monster_drow_bonus(img.lines, &img);
+    monster_draw_bonus(img.lines, &img);
 	mlx_hook(img.win, 2, 0, move_player_bonus, &img);
     mlx_loop_hook(img.mlx_ptr, monster_move, &img);
 	mlx_loop(img.mlx_ptr);
