@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:06:24 by aelbouab          #+#    #+#             */
-/*   Updated: 2025/02/08 18:43:51 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:25:50 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <fcntl.h>
-# include <mlx.h>
+# include "./minilibx/mlx.h"
 
 typedef struct s_data
 {
@@ -61,7 +61,7 @@ char	*maps_s(char *line);
 void	flood_test(char **lines);
 void	name_error(char *name);
 void	drawing(char *maps);
-t_data	ft_imgnew(t_data *img, void *mlx_ptr);
+t_data	putimage(t_data *img, void *mlx_ptr);
 int		move_player(int key, void *p);
 t_pos	player_pos(char **lines, int k);
 int		map_len(char **lines);
@@ -96,15 +96,15 @@ char	**floodfill_bonus(char **lines, int x, int y);
 void	flood_test_bonus(char **lines);
 char	*maps_s_bonus(char *line);
 void	parssing_bonus(char **lines, char *maps);
-t_data	ft_imgnew_bonus(t_data *img, void *mlx_ptr);
+t_data	putimage_bonus(t_data *img, void *mlx_ptr);
 void	drawing_bonus(char *maps);
-t_data	ft_imgnew_bonus(t_data *img, void *mlx_ptr);
+t_data	putimage_bonus(t_data *img, void *mlx_ptr);
 void	floor_drawing_bonus(char **lines, t_data *img);
 int		move_player_bonus(int key, void *p);
 t_pos	player_pos_bonus(char **lines, int k);
 char	*ft_itoa(int n);
 int		monster_move(void *param);
-t_mdata	m_image(t_mdata *mon, void *mlx_ptr);
+t_mdata	monster_image(t_mdata *mon, void *mlx_ptr);
 void	name_error_bonus(char *name);
 // void	animation(t_data *img);
 // void	portal_an(t_data *img);
