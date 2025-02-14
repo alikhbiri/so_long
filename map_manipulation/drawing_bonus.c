@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:23:23 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/08 18:45:22 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:20:20 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static void wall_draw_bonus(char **lines, t_data *img)
 {

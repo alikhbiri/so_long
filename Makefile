@@ -1,10 +1,12 @@
 NAME = so_long
-
 NAME_B = so_long_b
 
-CC = cc 
-
+CC = cc
 FLAGS = -Wall -Wextra -Werror -Imlx
+
+# MiniLibX Path
+MLX_DIR = minilibx-linux
+MLX_FLAGS = -L$(MLX_DIR) -lmlx -L/usr/lib -lXext -lX11 -lm
 
 SRC = outils/ft_split.c \
 		parssing/parssing.c \
@@ -12,11 +14,11 @@ SRC = outils/ft_split.c \
 		outils/gnl_utils.c \
 		outils/ft_putstr_fd.c \
 		map_manipulation/floodfill.c \
-		map_manipulationdrawing.c \
+		map_manipulation/drawing.c \
 		map_manipulation/putimage.c \
 		outils/len.c \
 		outils/ft_putnbr.c \
-		player_monster/move_player.c \
+		move_player.c \
 		map_manipulation/exit.c \
 		so_long.c
 
@@ -31,7 +33,7 @@ SRC_B = outils/gnl.c \
 			player_monster/monster.c \
 			parssing/animation.c \
 			player_monster/monster_move.c \
-			parssing/parssing_bonus.c\
+			parssing/parssing_bonus.c \
 			map_manipulation/floodfill_bonus.c \
 			map_manipulation/drawing_bonus.c \
 			map_manipulation/putimage_bonus.c \
@@ -51,19 +53,19 @@ bonus: $(NAME_B)
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ) $(INCLUDE)
-	$(CC) $(OBJ) -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	make -C $(MLX_DIR)  # Compile MiniLibX
+	$(CC) $(OBJ) $(MLX_FLAGS) -o $(NAME)
 
 $(NAME_B): $(OBJ_B) $(INCLUDE)
-	$(CC) $(OBJ_B) -lmlx -framework OpenGL -framework AppKit -o $(NAME_B)
+	make -C $(MLX_DIR)  # Compile MiniLibX
+	$(CC) $(OBJ_B) $(MLX_FLAGS) -o $(NAME_B)
 
 clean:
-	rm -rf $(OBJ)
-	rm -rf $(OBJ_B)
+	rm -rf $(OBJ) $(OBJ_B)
 
 fclean: clean
-	rm -rf $(NAME)
-	rm -rf $(NAME_B)
+	rm -rf $(NAME) $(NAME_B)
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: clean fclean re all bonus

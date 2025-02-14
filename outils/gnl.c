@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:13:01 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 15:13:04 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:32:29 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 size_t	ft_len(const char *str, int j)
 {
@@ -36,12 +36,10 @@ size_t	ft_len(const char *str, int j)
 static char	*cleanbuf(char *rst)
 {
 	int		i;
-	int		j;
 	char	*buf;
 
 	if (!rst)
 		return (NULL);
-	j = 0;
 	i = 0;
 	buf = ft_strdup(rst);
 	free (rst);

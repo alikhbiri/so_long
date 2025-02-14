@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:10:50 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 17:29:24 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/14 15:13:34 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void    wall_draw(char **lines, t_data *img)
 {
@@ -110,7 +110,7 @@ void	drawing(char *maps)
 	mlx_ptr = mlx_init();
 	img.lines = ft_split(maps, '\n');
 	img.count = 1;
-	img = ft_imgnew(&img, mlx_ptr);
+	img = putimage(&img, mlx_ptr);
 	floor_drawing(img.lines, &img);
 	wall_draw(img.lines, &img);
 	door_draw(img.lines, &img);

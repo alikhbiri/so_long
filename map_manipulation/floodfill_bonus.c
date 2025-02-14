@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:33:25 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 16:34:54 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:20:31 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 char    **floodfill_bonus(char **lines, int x, int y)
 {

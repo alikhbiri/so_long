@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:57:39 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/08 18:07:26 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/14 15:35:45 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void move_up(t_data *img)
     if (lines[(pp.x) - 1][pp.y] != '1')
     {
         ft_putnbr(img->count++);
-        write (1, '\n', 1);
+        write (1, "\n", 1);
         if (lines[(pp.x) - 1][pp.y] == 'X')
             return (write(1, "WINNER!!!", 9), exit (0));
         if (!find_exit(lines))
@@ -50,11 +50,11 @@ static void	move_down(t_data *img)
 	pp = player_pos(lines, 0);
 	if (lines[(pp.x) + 1][pp.y] != '1')
 	{
-		ft_putnbr (img->cp++);
+		ft_putnbr (img->count++);
 		write (1, "\n", 1);
 		if (lines[(pp.x) + 1][pp.y] == 'X')
 			return (write(1, "WINNER!!!", 9), exit (0));
-		if (!fined_exit(lines))
+		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
 			lines[pp.x][pp.y] = '0';
@@ -78,11 +78,11 @@ static void	move_right(t_data *img)
 	pp = player_pos(lines, 0);
 	if (lines[pp.x][pp.y + 1] != '1')
 	{
-		ft_putnbr (img->cp++);
+		ft_putnbr (img->count++);
 		write (1, "\n", 1);
 		if (lines[pp.x][pp.y + 1] == 'X')
 			return (write(1, "WINNER!!!", 9), exit (0));
-		if (!fined_exit(lines))
+		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
 			lines[pp.x][pp.y] = '0';
@@ -106,11 +106,11 @@ static void	move_left(t_data *img)
 	pp = player_pos(lines, 0);
 	if (lines[pp.x][pp.y - 1] != '1')
 	{
-		ft_putnbr (img->cp++);
+		ft_putnbr (img->count++);
 		write (1, "\n", 1);
 		if (lines[pp.x][pp.y - 1] == 'X')
 			return (write(1, "WINNER!!!", 9), exit (0));
-		if (!fined_exit(lines))
+		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
 			lines[pp.x][pp.y] = '0';

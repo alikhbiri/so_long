@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 18:48:03 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 14:23:57 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:19:55 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void	m_move_u(t_data	*img, int i, t_mdata *mon)
 {

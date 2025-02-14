@@ -6,12 +6,12 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:01:04 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/08 18:04:32 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:20:05 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static void	move_up(t_data *img)
 {

@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:06:24 by aelbouab          #+#    #+#             */
-/*   Updated: 2025/02/10 15:25:50 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:34:03 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <fcntl.h>
-# include "./minilibx/mlx.h"
+# include "./minilibx-linux/mlx.h"
 
 typedef struct s_data
 {
@@ -38,6 +38,7 @@ typedef struct s_data
 	int		img_height;
 	int		count;
 	char	**lines;
+	void    *img_collectable;
 }		t_data;
 
 typedef struct p_pos
@@ -66,7 +67,7 @@ int		move_player(int key, void *p);
 t_pos	player_pos(char **lines, int k);
 int		map_len(char **lines);
 int		line_len(char *lines);
-int		collectable_checker(char **lines)
+int		collectable_checker(char **lines);
 void	open_door(char **lines, t_data *map);
 int		find_exit(char **lines);
 void	len_check(char **lines);
@@ -74,8 +75,9 @@ void	floor_drawing(char **lines, t_data *img);
 void	ft_putnbr(int n);
 void	clearbuf(char **lines);
 void	write_err(char *str);
+t_data *ft_imgnew(t_data *img, void *mlx_ptr);
 
-//bonus
+// BONUS
 
 typedef struct m_pos
 {
@@ -98,7 +100,6 @@ char	*maps_s_bonus(char *line);
 void	parssing_bonus(char **lines, char *maps);
 t_data	putimage_bonus(t_data *img, void *mlx_ptr);
 void	drawing_bonus(char *maps);
-t_data	putimage_bonus(t_data *img, void *mlx_ptr);
 void	floor_drawing_bonus(char **lines, t_data *img);
 int		move_player_bonus(int key, void *p);
 t_pos	player_pos_bonus(char **lines, int k);
@@ -106,8 +107,6 @@ char	*ft_itoa(int n);
 int		monster_move(void *param);
 t_mdata	monster_image(t_mdata *mon, void *mlx_ptr);
 void	name_error_bonus(char *name);
-// void	animation(t_data *img);
-// void	portal_an(t_data *img);
 void	player_draw_bonus(char **lines, t_data *img);
 void	cp_bonus(t_data *img);
 t_mpos	monster_pos(char **lines, int i);

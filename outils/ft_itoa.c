@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:45:09 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 14:45:11 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:19:02 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static int	size_j(long nb)
 {

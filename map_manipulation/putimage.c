@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:26:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 14:31:17 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:20:44 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void    floor_drawing(char  **lines, t_data *img)
 {

@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:13:25 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 15:13:27 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:19:27 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

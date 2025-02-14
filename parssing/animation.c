@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:50:26 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 14:56:56 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:19:40 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void an_loop(t_data *img, void *bp, char c)
 {

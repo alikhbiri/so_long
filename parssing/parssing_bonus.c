@@ -6,13 +6,13 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:10:19 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 15:12:11 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:25:50 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-static void map_control(char *maps, char **lines, int l)
+static void map_control(char **maps, char **lines, int l)
 {
     int i;
     int ls;

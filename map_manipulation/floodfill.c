@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:17:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 16:29:54 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:48:29 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 char    **floodfill(char **lines, int x, int y)
 {
@@ -55,7 +55,7 @@ void    flood_test(char **lines)
         j = 0;
         while (lines[i][j])
         {
-            if (lines[i][j] == 'E' || lines == 'C')
+            if (lines[i][j] == 'E' || lines[i][j] == 'C')
                 write_err("non accessable path to items or exit");
             j++;
         }

@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:15:23 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/06 15:15:25 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:19:10 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

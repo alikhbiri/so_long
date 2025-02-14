@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:14:58 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 15:08:43 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:18:41 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static char	**arg_m(char const *s, char c)
 {
 	char	**sp;
-	int		i;
 	int		j;
+	int		i;
 
 	j = 0;
 	i = 0;
@@ -110,9 +110,7 @@ static char	**printsp(char const *s, char c, char **sp)
 char	**ft_split(char const *s, char c)
 {
 	char	**sp;
-	int		i;
 
-	i = 0;
 	if (!s)
 		return (NULL);
 	sp = arg_m(s, c);
@@ -120,9 +118,7 @@ char	**ft_split(char const *s, char c)
 	{
 		sp = splloc(s, c, sp);
 		if (sp == NULL)
-		{
 			return (NULL);
-		}
 		sp = printsp(s, c, sp);
 		return (sp);
 	}

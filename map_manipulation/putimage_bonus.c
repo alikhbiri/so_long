@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:36:39 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 14:44:22 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:20:40 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_lomg.h"
+#include "../so_lomg.h"
 
 void    cp_bonus(t_data *img)
 {

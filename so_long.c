@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:46:07 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/10 14:47:06 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/14 15:32:23 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	main(int ac, char **av)
 			write_err("Empty or non existing map!");
 		lines = ft_split(maps, '\n');
 		parssing(lines, maps);
-		pp = player_pous(lines, 0);
+		pp = player_pos(lines, 0);
 		lines = floodfill(lines, pp.y, pp.x);
 		flood_test(lines);
-		drowing(maps);
+		drawing(maps);
 	}
 }

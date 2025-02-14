@@ -6,11 +6,11 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 18:13:10 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/08 18:42:31 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:20:00 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static int  monster_count(char **lines)
 {
