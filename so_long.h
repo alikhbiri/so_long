@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 11:06:24 by aelbouab          #+#    #+#             */
-/*   Updated: 2025/02/14 17:34:03 by alkhbiri         ###   ########.fr       */
+/*   Created: 2025/02/17 17:01:39 by alkhbiri          #+#    #+#             */
+/*   Updated: 2025/02/17 17:01:40 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
@@ -76,6 +78,7 @@ void	ft_putnbr(int n);
 void	clearbuf(char **lines);
 void	write_err(char *str);
 t_data *ft_imgnew(t_data *img, void *mlx_ptr);
+void parssing(char **lines, char *maps);
 
 // BONUS
 

@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:36:32 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/14 15:37:26 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 17:10:28 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ int find_exit(char **lines)
 
     i = 0;
     check = 0;
+    j = 0;
     while (lines[i])
     {
         j = 0;
         while (lines[i][j])
         {
-            if (lines[i][j] == 'E' || lines[i][j] == 'Q')
+            if (lines[i][j] == 'E' || lines[i][j] == 'X')
             {
                 check = 1;
                 break;
@@ -41,22 +42,23 @@ int collectable_checker(char **lines)
 {
     int i;
     int j;
-    int count;
+    int check;
 
     i = 0;
-    count = 0;
+    j = 0;
+    check = 0;
     while (lines[i])
     {
         j = 0;
         while (lines[i][j])
         {
             if (lines[i][j] == 'C')
-                count++;
+                check++;
             j++;
         }
         i++;
     }
-    return (count);
+    return (check);
 }
 
 void open_door(char **lines, t_data *map)
@@ -72,7 +74,7 @@ void open_door(char **lines, t_data *map)
         {
             if (lines[i][j] == 'E')
             {
-                lines[i][j] = 'O';
+                lines[i][j] = 'X';
                 mlx_put_image_to_window(map->mlx_ptr,
                     map->win, map->img_floor, j * 60, i * 60);
                 if (lines[i][j + 1] == '0')

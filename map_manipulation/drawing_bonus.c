@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:23:23 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/13 15:20:20 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 15:00:34 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ static void wall_draw_bonus(char **lines, t_data *img)
         while (lines[i][j])
         {
             if (lines[i][j] == '1')
-                mlx_put_image_to_window((img)->mlx_ptr,
-                    (img)->win, (img)->img_wall, j * 60, i * 60);
+                mlx_put_image_to_window(img->mlx_ptr,
+                    img->win, img->img_wall, j * 60, i * 60);
             j++;   
         }
         i++;
     }
 }
 
-static void collectable_draw(char **lines, t_data *img)
+static void collectable_draw_bonus(char **lines, t_data *img)
 {
     int i;
     int j;
@@ -46,8 +46,8 @@ static void collectable_draw(char **lines, t_data *img)
         while (lines[i][j])
         {
             if (lines[i][j] == 'C')
-                mlx_put_image_to_window((img)->mlx_ptr,
-                    (img)->win, (img)->img_collectable, j * 60, i * 60);
+                mlx_put_image_to_window(img->mlx_ptr,
+                    img->win, img->img_collectable, j * 60, i * 60);
             j++;   
         }
         i++;
@@ -89,8 +89,8 @@ static void    door_draw_bonus(char **lines, t_data *img)
         {
             if (lines[i][j] == 'E')
             {
-                mlx_put_image_to_window((img)->mlx_ptr,
-                    (img)->win, (img)->img_door, j * 60, i * 60);
+                mlx_put_image_to_window(img->mlx_ptr,
+                    img->win, img->img_door, j * 60, i * 60);
                 break ;
             }
             j++;   

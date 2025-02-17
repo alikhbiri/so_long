@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:10:50 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/14 15:13:34 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 17:07:44 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void    door_draw(char **lines, t_data *img)
             if (lines[i][j] == 'E')
             {
                 mlx_put_image_to_window((img)->mlx_ptr,
-                    (img)->win, (img)->img_door, j * 60, i * 60);
+                    (img)->win, img->img_door, j * 60, i * 60);
                 break ;
             }
             j++;   

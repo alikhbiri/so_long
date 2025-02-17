@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:33:25 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/13 15:20:31 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:01:48 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void    flood_test_bonus(char **lines)
         while (lines[i][j])
         {
             if (lines[i][j] == 'E' || lines == 'C')
-                write_err("non accessable path to items or exit");
+                write_err_bonus("non accessable path to items or exit");
             j++;
         }
         i++;

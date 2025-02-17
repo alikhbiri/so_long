@@ -2,10 +2,12 @@ NAME = so_long
 NAME_B = so_long_b
 
 CC = cc
-FLAGS = -Wall -Wextra -Werror -Imlx
+FLAGS = -Wall -Wextra -Werror -I$(MLX_DIR)
 
-# MiniLibX Path
+# MiniLibX Paths
 MLX_DIR = minilibx-linux
+MLX_LIB = $(MLX_DIR)/libmlx.a
+MLX_INC = -I$(MLX_DIR)
 MLX_FLAGS = -L$(MLX_DIR) -lmlx -L/usr/lib -lXext -lX11 -lm
 
 SRC = outils/ft_split.c \
@@ -20,7 +22,7 @@ SRC = outils/ft_split.c \
 		outils/ft_putnbr.c \
 		move_player.c \
 		map_manipulation/exit.c \
-		so_long.c
+		so_long.c 
 
 SRC_B = outils/gnl.c \
 			outils/gnl_utils.c \
@@ -50,14 +52,15 @@ all: $(NAME)
 bonus: $(NAME_B)
 
 %.o: %.c $(INCLUDE)
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) $(MLX_INC) -c $< -o $@
 
-$(NAME): $(OBJ) $(INCLUDE)
-	make -C $(MLX_DIR)  # Compile MiniLibX
+$(MLX_LIB):
+	make -C $(MLX_DIR)
+
+$(NAME): $(MLX_LIB) $(OBJ)
 	$(CC) $(OBJ) $(MLX_FLAGS) -o $(NAME)
 
-$(NAME_B): $(OBJ_B) $(INCLUDE)
-	make -C $(MLX_DIR)  # Compile MiniLibX
+$(NAME_B): $(MLX_LIB) $(OBJ_B)
 	$(CC) $(OBJ_B) $(MLX_FLAGS) -o $(NAME_B)
 
 clean:

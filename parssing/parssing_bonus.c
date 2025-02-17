@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 15:10:19 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/13 15:25:50 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:00:42 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ static void map_control(char **maps, char **lines, int l)
     {
         if ((maps[i] == '\n' && maps[i + 1] == '\n')
             || maps[0] == '\n' || maps[ls - 1] == '\n')
-            write_err("map with empty line");
+           write_err_bonus("map with empty line");
         if (maps[i] != 'P' && maps[i] != 'E'
             && maps[i] != 'C' && maps[i] != '1'
             && maps[i] != '0' && maps[i] != '\n')
-            write_err("map with unknown chars");
+           write_err_bonus("map with unknown chars");
         i++;
     }
 }
@@ -42,7 +42,7 @@ static void wall_error(char **lines)
     while (lines[0][i])
     {
         if (lines[0][i] != '1')
-            write_err("Map is not surrounded by walls");
+           write_err_bonus("Map is not surrounded by walls");
         i++;
     }
     i = 0;
@@ -50,7 +50,7 @@ static void wall_error(char **lines)
     while (lines[i])
     {
         if (lines[i][0] != '1' || lines[i][ls - 1] != '1')
-            write_err("Map is not surrounded by walls");
+           write_err_bonus("Map is not surrounded by walls");
         i++;
     }
     i = -1;
@@ -58,7 +58,7 @@ static void wall_error(char **lines)
     while (lines[ls - 1][++i])
     {
         if (lines[ls - 1][i] != '1')
-            write_err("Map is not surrounded by walls");
+           write_err_bonus("Map is not surrounded by walls");
     }
 }
 
@@ -69,7 +69,7 @@ void    name_error(char *name)
     ls = line_len(name) - 1;
     if (name[ls] != 'r' || name[ls - 1] != 'e'
         || name[ls - 2] != 'b' || name[ls - 3] = '.')
-        write_err("Map extension must be '.ber'");
+       write_err_bonus("Map extension must be '.ber'");
 }
 
 static void items_error(char **lines, int p, int e, int c)
@@ -99,7 +99,7 @@ static void items_error(char **lines, int p, int e, int c)
         i++;
     }
     if (p != 1 || e != 1 || c < 1 || m < 1)
-        write_err("You must have only one P and E and at least one C and M");
+       write_err_bonus("You must have only one P and E and at least one C and M");
 }
 
 void    parssing(char **lines, char **maps)
@@ -109,5 +109,5 @@ void    parssing(char **lines, char **maps)
     wall_error(lines);
     items_error(lines, 0, 0, 0);
     if(line_len(*lines) > 136 || map_len(lines) > 136)
-        write_err("Map too big");
+       write_err_bonus("Map too big");
 }

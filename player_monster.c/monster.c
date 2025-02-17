@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 18:13:10 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/13 15:20:00 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:08:08 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ void    move_to_kill(t_data *img, t_pos *pp, t_mpos *mp, t_mdata *mon)
     m = monster_count(img->lines);
     while (i < m)
     {
-        if (mp->x[i] < pp->x)
-            m_move_d(img, i, mon);
-        if (mp->y[i] < pp._y)
-            m_move_r(img, i, mon);
+        if (mp->x[i] > pp->x)
+            m_move_u(img, i, mon);
+        if (mp->y[i] > pp._y)
+            m_move_l(img, i, mon);
         i++;
     }
     while (i > 0)
@@ -108,6 +108,8 @@ int	monster_move(void *param)
 		free(mp.x);
 		free(mp.y);
 	}
+    if (j % 1000 == 0)
+		animation(img);
 	j++;
 	return (0);
 }

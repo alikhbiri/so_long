@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:46:07 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/14 15:32:23 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 14:54:00 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int ac, char **av)
 	char	*maps;
 	char	**lines;
 	t_pos	pp;
-
+	
 	if (ac == 2)
 	{
 		line = av[1];

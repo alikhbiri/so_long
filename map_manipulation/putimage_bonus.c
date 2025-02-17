@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:36:39 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/13 15:20:40 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/17 17:51:59 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,26 @@ void    player_draw_bonus(char  **lines, t_data *img)
         }
         i++;
     }
+}
+
+void	floor_drawing_bonus(char **lines, t_data *img)
+{
+	int	j;
+	int	i;
+
+	j = 0;
+	i = 0;
+	while (lines[i])
+	{
+		j = 0;
+		while (lines[i][j])
+		{
+			mlx_put_image_to_window((img)->mlx_ptr,
+				(img)->win, (img)->img_floor, j * 60, i * 60);
+			j++;
+		}
+		i++;
+	}
 }
 
 t_mdata	monster_image(t_mdata *mon, void *mlx_ptr)
