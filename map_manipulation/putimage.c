@@ -17,15 +17,15 @@ void    floor_drawing(char  **lines, t_data *img)
     int i;
     int j;
 
+	img->count = 0;
     i = 0;
-    j = 0;
     while (lines[i])
     {
-        j = 0;
+		j = 0;
         while (lines[i][j])
         {
-            mlx_put_image_to_window((img)->mlx_ptr,
-                (img)->win, (img)-> img_floor, j * 60, i *60);
+			mlx_put_image_to_window(img->mlx_ptr,
+                img->win, img->img_floor, j, i);
             j++;
         }
         i++;
@@ -46,7 +46,7 @@ t_data putimage(t_data *img, void *mlx_ptr)
 			&img->img_width, &img->img_height);
 	img->img_floor = mlx_xpm_file_to_image(img->mlx_ptr, "img/floor.xpm",
 			&img->img_width, &img->img_height);
-	img->img_key = mlx_xpm_file_to_image(img->mlx_ptr, "img/key.xpm",
+	img->img_collectable = mlx_xpm_file_to_image(img->mlx_ptr, "img/collectable.xpm",
 			&img->img_width, &img->img_height);
 	img->img_pface = mlx_xpm_file_to_image(img->mlx_ptr, "img/face.xpm",
 			&img->img_width, &img->img_height);
@@ -56,7 +56,7 @@ t_data putimage(t_data *img, void *mlx_ptr)
 			&img->img_width, &img->img_height);
 	img->img_pleft = mlx_xpm_file_to_image(img->mlx_ptr, "img/left.xpm",
 			&img->img_width, &img->img_height);
-	img->win = mlx_new_window(img->mlx_ptr, img->img_width * line_len(*lines),
-			img->img_height * map_len(lines), "so long");
+	img->win = mlx_new_window(img->mlx_ptr, TILE_SIZE * line_len(*lines),
+			TILE_SIZE * map_len(lines), "so long");
 	return (*img);
 }

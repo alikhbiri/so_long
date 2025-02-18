@@ -22,13 +22,14 @@
 # include <fcntl.h>
 # include "./minilibx-linux/mlx.h"
 
+#define TILE_SIZE 32
+
 typedef struct s_data
 {
 	void	*img_door;
 	void	*img_opendoor;
 	void	*img_wall;
 	void	*img_floor;
-	void	*img_key;
 	void	*img_pface;
 	void	*img_pback;
 	void	*img_pright;

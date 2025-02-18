@@ -47,7 +47,7 @@ void    collectable_draw(char **lines, t_data *img)
         {
             if (lines[i][j] == 'C')
                 mlx_put_image_to_window((img)->mlx_ptr,
-                    (img)->win, (img)->img_collectable, j * 60, i * 60);
+                    (img)->win, (img)->img_collectable, j, i);
             j++;   
         }
         i++;
@@ -105,17 +105,30 @@ void    player_draw(char **lines, t_data *img)
 void	drawing(char *maps)
 {
 	t_data	img;
-	void	*mlx_ptr;
+    int width;
+    int height;
 
-	mlx_ptr = mlx_init();
+	img.mlx_ptr = mlx_init();
+    if (!img.mlx_ptr)
+    {
+        exit(0);
+    }
 	img.lines = ft_split(maps, '\n');
 	img.count = 1;
-	img = putimage(&img, mlx_ptr);
-	floor_drawing(img.lines, &img);
+	img = putimage(&img, img.mlx_ptr);
+    img.img_floor = mlx_xpm_file_to_image(img.mlx_ptr, "img/floor.xpm",
+        &width, &height);
+    if (!img.img_floor)
+    {
+        printf("here\n");
+        exit(0);
+    }
+    floor_drawing(img.lines, &img);
 	wall_draw(img.lines, &img);
 	door_draw(img.lines, &img);
 	player_draw(img.lines, &img);
 	collectable_draw(img.lines, &img);
+    // exit(0);
 	mlx_hook(img.win, 2, 0, move_player, &img);
 	mlx_loop(img.mlx_ptr);
 }
