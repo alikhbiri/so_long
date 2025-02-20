@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_player.c                                      :+:      :+:    :+:   */
+/*   move_player_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 14:30:22 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 15:11:25 by alkhbiri         ###   ########.fr       */
+/*   Created: 2025/02/19 14:30:18 by alkhbiri          #+#    #+#             */
+/*   Updated: 2025/02/19 16:08:29 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@ static void	move_up(t_data *img)
 	t_pos	pp;
 
 	lines = img->lines;
-	pp = player_pos(lines, 0);
-	if (lines[(pp.x) - 1][pp.y] != '1')
+	pp = player_pos_bonus(lines, 0);
+	if (lines[(pp.x) - 1][pp.y] != '1' && lines[(pp.x) - 1][pp.y] != 'Q')
 	{
-		ft_putnbr (img->count++);
-		write (1, "\n", 1);
+		cp_bonus(img);
+		if (lines[(pp.x) - 1][pp.y] == 'M')
+			return (write(1, "Loser, what a shame", 19), exit (1));
 		if (lines[(pp.x) - 1][pp.y] == 'X')
-			return (write(1, "Winner", 9), exit (0));
+			return (write(1, "Winner!!", 8), exit (0));
 		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
@@ -48,13 +49,14 @@ static void	move_down(t_data *img)
 	t_pos	pp;
 
 	lines = img->lines;
-	pp = player_pos(lines, 0);
-	if (lines[(pp.x) + 1][pp.y] != '1')
+	pp = player_pos_bonus(lines, 0);
+	if (lines[(pp.x) + 1][pp.y] != '1' && lines[(pp.x) + 1][pp.y] != 'Q')
 	{
-		ft_putnbr (img->count++);
-		write (1, "\n", 1);
+		cp_bonus(img);
+		if (lines[(pp.x) + 1][pp.y] == 'M')
+			return (write(1, "Loser, what a shame", 19), exit (1));
 		if (lines[(pp.x) + 1][pp.y] == 'X')
-			return (write(1, "Winner", 9), exit (0));
+			return (write(1, "Wineer !!", 8), exit (0));
 		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
@@ -76,13 +78,14 @@ static void	move_right(t_data *img)
 	t_pos	pp;
 
 	lines = img->lines;
-	pp = player_pos(lines, 0);
-	if (lines[pp.x][pp.y + 1] != '1')
+	pp = player_pos_bonus(lines, 0);
+	if (lines[pp.x][pp.y + 1] != '1' && lines[pp.x][pp.y + 1] != 'Q')
 	{
-		ft_putnbr (img->count++);
-		write (1, "\n", 1);
+		cp_bonus(img);
+		if (lines[pp.x][pp.y + 1] == 'M')
+			return (write(1, "Loser, what a shame", 19), exit (1));
 		if (lines[pp.x][pp.y + 1] == 'X')
-			return (write(1, "Winner", 9), exit (0));
+			return (write(1, "Winner !!", 8), exit (0));
 		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
@@ -104,13 +107,14 @@ static void	move_left(t_data *img)
 	t_pos	pp;
 
 	lines = img->lines;
-	pp = player_pos(lines, 0);
-	if (lines[pp.x][pp.y - 1] != '1')
+	pp = player_pos_bonus(lines, 0);
+	if (lines[pp.x][pp.y - 1] != '1' && lines[pp.x][pp.y - 1] != 'Q')
 	{
-		ft_putnbr (img->count++);
-		write (1, "\n", 1);
+		cp_bonus(img);
+		if (lines[pp.x][pp.y - 1] == 'M')
+			return (write(1, "Loser, what a shame", 19), exit (1));
 		if (lines[pp.x][pp.y - 1] == 'X')
-			return (write(1, "Winner", 9), exit (0));
+			return (write(1, "Winner !!", 8), exit (0));
 		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else
@@ -126,7 +130,7 @@ static void	move_left(t_data *img)
 	}
 }
 
-int	move_player(int key, void *p)
+int	move_player_bonus(int key, void *p)
 {
 	t_data	*map;
 	char	**lines;
@@ -134,6 +138,7 @@ int	move_player(int key, void *p)
 
 	map = p;
 	lines = map->lines;
+	printf ("%d\n",key);
 	if (key == 65362)
 		move_up(p);
 	else if (key == 65364)

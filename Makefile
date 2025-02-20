@@ -10,36 +10,36 @@ MLX_LIB = $(MLX_DIR)/libmlx.a
 MLX_INC = -I$(MLX_DIR)
 MLX_FLAGS = -L$(MLX_DIR) -lmlx -L/usr/lib -lXext -lX11 -lm
 
-SRC = outils/ft_split.c \
-		parssing/parssing.c \
-		outils/gnl.c \
-		outils/gnl_utils.c \
-		outils/ft_putstr_fd.c \
-		map_manipulation/floodfill.c \
-		map_manipulation/drawing.c \
-		map_manipulation/putimage.c \
-		outils/len.c \
-		outils/ft_putnbr.c \
+SRC = ft_split.c \
+		parssing.c \
+		gnl.c \
+		gnl_utils.c \
+		ft_putstr_fd.c \
+		floodfill.c \
+		drawing.c \
+		putimage.c \
+		len.c \
+		ft_putnbr.c \
 		move_player.c \
-		map_manipulation/exit.c \
+		exit.c \
 		so_long.c 
 
-SRC_B = outils/gnl.c \
-			outils/gnl_utils.c \
-			outils/ft_split.c \
-			outils/ft_putnbr.c \
-			outils/ft_itoa.c \
-			outils/len.c \
-			outils/ft_putstr_fd.c \
-			map_manipulation/exit.c \
-			player_monster/monster.c \
-			parssing/animation.c \
-			player_monster/monster_move.c \
-			parssing/parssing_bonus.c \
-			map_manipulation/floodfill_bonus.c \
-			map_manipulation/drawing_bonus.c \
-			map_manipulation/putimage_bonus.c \
-			player_monster/move_player_bonus.c \
+SRC_B = gnl.c \
+			gnl_utils.c \
+			ft_split.c \
+			ft_putnbr.c \
+			ft_itoa.c \
+			len.c \
+			ft_putstr_fd.c \
+			exit.c \
+			monster.c \
+			animation.c \
+			monster_move.c \
+			parssing_bonus.c \
+			floodfill_bonus.c \
+			drawing_bonus.c \
+			putimage_bonus.c \
+			move_player_bonus.c \
 			so_long_bonus.c
 
 OBJ = $(SRC:.c=.o)

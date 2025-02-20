@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 15:18:49 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/17 17:58:04 by alkhbiri         ###   ########.fr       */
+/*   Created: 2025/02/19 14:30:36 by alkhbiri          #+#    #+#             */
+/*   Updated: 2025/02/20 15:06:54 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include "so_long.h"
 
@@ -30,9 +32,9 @@ int	main(int ac, char **av)
 	{
 		line = av[1];
 		name_error_bonus(line);
-		maps = maps_s(line);
+		maps = maps_s_bonus(line);
 		if (!maps)
-			write_err_bonus("empty or not existe file");
+			write_err_bonus("empty or non existing file");
 		lines = ft_split(maps, '\n');
 		parssing_bonus(lines, maps);
 		pp = player_pos_bonus(lines, 0);
