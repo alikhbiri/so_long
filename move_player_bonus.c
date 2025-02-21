@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:18 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/19 16:08:29 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:28:59 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,27 +130,32 @@ static void	move_left(t_data *img)
 	}
 }
 
-int	move_player_bonus(int key, void *p)
+int move_player_bonus(int key, void *p)
 {
-	t_data	*map;
-	char	**lines;
-	int		i;
-
-	map = p;
-	lines = map->lines;
-	printf ("%d\n",key);
-	if (key == 65362)
-		move_up(p);
-	else if (key == 65364)
-		move_down(p);
-	else if (key == 65363)
-		move_right(p);
-	else if (key == 65361)
-		move_left(p);
-	else if (key == 65307)
-		exit (1);
-	i = collectable_checker(lines);
-	if (i == 0)
-		open_door(lines, map);
-	return (0);
+    t_data *map;
+    char **lines;
+    int i;
+    
+    map = p;
+    lines = map->lines;
+    
+    // Print key code for debugging
+    printf("Key pressed: %d\n", key);
+    
+    // Linux MLX standard keycodes
+    if (key == 65307)      // ESC
+        exit(1);
+    else if (key == 119 || key == 65362)  // W or Up Arrow
+        move_up(p);
+    else if (key == 115 || key == 65364)  // S or Down Arrow 
+        move_down(p);
+    else if (key == 100 || key == 65363)  // D or Right Arrow
+        move_right(p);
+    else if (key == 97 || key == 65361)   // A or Left Arrow
+        move_left(p);
+    
+    i = collectable_checker(lines);
+    if (i == 0)
+        open_door(lines, map);
+    return (0);
 }

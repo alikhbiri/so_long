@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 16:53:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 15:11:11 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:43:00 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <fcntl.h>
 # include <mlx.h>
 
-#define TILE_SIZE 32
+#define TILE_SIZE 60
 
 typedef struct s_data
 {
