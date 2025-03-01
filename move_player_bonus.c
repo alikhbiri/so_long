@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:18 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 17:28:59 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 11:40:03 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	move_up(t_data *img)
 		if (lines[(pp.x) - 1][pp.y] == 'M')
 			return (write(1, "Loser, what a shame", 19), exit (1));
 		if (lines[(pp.x) - 1][pp.y] == 'X')
-			return (write(1, "Winner!!", 8), exit (0));
+			return (write(1, "Winner !!", 8), exit (0));
 		if (!find_exit(lines))
 			lines[pp.x][pp.y] = 'E';
 		else

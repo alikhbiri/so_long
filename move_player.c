@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:22 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 17:28:46 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 11:38:55 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,7 @@ int move_player(int key, void *p)
     lines = map->lines;
     
     // Print key code for debugging
-    printf("Key pressed: %d\n", key);
+    // printf("Key pressed: %d\n", key);
     
     // Linux MLX standard keycodes
     if (key == 65307)      // ESC
