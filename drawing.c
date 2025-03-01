@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:28:48 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/19 16:54:02 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:10:39 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,6 @@ void	drawing(char *maps)
 	door_draw(img.lines, &img);
 	player_draw(img.lines, &img);
 	collectable_draw(img.lines, &img);
-	mlx_hook(img.win, 2, 0, move_player, &img);
+	mlx_hook(img.win, 2, 1, move_player, &img);
 	mlx_loop(img.mlx_ptr);
 }

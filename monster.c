@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:13 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 14:58:17 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/27 15:10:44 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int	monster_move(void *param)
 	static int	j;
 
 	img = param;
-	if (j == 7000)
+	if (j == 14000)
 	{
 		mon = monster_image(&mon, img->mlx_ptr);
 		mp = monster_pos(img->lines, -1);
@@ -110,10 +110,10 @@ int	monster_move(void *param)
 		free (mp.x);
 		free (mp.y);
 	}
-	// if (j % 1000 == 0)
-	// 	animation(img);
-	// if (j % 500 == 0)
-	// 	portal_an(img);
-	// j++;
+	if (j % 1000 == 0)
+		animation(img);
+	if (j % 500 == 0)
+		portal_an(img);
+	j++;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:28:41 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 15:05:39 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:10:33 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ void	drawing_bonus(char *maps)
 	player_draw_bonus(img.lines, &img);
 	collectable_draw_bonus(img.lines, &img);
 	monster_draw_bonus(img.lines, &img);
-	mlx_hook(img.win, 2, 0, move_player_bonus, &img);
+	mlx_hook(img.win, 2, 1, move_player_bonus, &img);
 	mlx_loop_hook(img.mlx_ptr, monster_move, &img);
 	mlx_loop(img.mlx_ptr);
 }
