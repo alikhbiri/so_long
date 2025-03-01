@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:29:47 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/19 14:29:48 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:12:26 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -112,7 +110,7 @@ static char	**printsp(char const *s, char c, char **sp)
 char	**ft_split(char const *s, char c)
 {
 	char	**sp;
-	
+
 	if (!s)
 		return (NULL);
 	sp = arg_m(s, c);

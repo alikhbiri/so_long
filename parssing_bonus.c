@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:27 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/19 16:13:25 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:17:00 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -101,7 +99,7 @@ static void	items_error(char **lines, int p, int e, int c)
 		}
 	}
 	if (p != 1 || e != 1 || c < 1 || m < 1)
-		write_err_bonus("You must have only one P and E and at least one C and M");
+		write_err_bonus("You must have only 1 P/E and at least 1 C/M");
 }
 
 void	parssing_bonus(char **lines, char *maps)

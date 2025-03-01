@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:13 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/03/01 13:39:55 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:23:33 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -110,10 +108,6 @@ int	monster_move(void *param)
 		free (mp.x);
 		free (mp.y);
 	}
-	// if (j % 1000 == 0)
-	// 	animation(img);
-	// if (j % 500 == 0)
-	// 	portal_an(img);
 	j++;
 	return (0);
 }

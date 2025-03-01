@@ -6,17 +6,15 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:29:20 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 15:06:18 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:22:46 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
 void	cp_bonus(t_data *img)
 {
-	char *cp;
+	char	*cp;
 
 	cp = ft_itoa(img->count++);
 	mlx_put_image_to_window(img->mlx_ptr, img->win, img->img_wall, 0, 0);
@@ -95,7 +93,7 @@ t_data	putimage_bonus(t_data *img, void *mlx_ptr)
 			&img->img_width, &img->img_height);
 	img->img_floor = mlx_xpm_file_to_image(img->mlx_ptr, "img/floor.xpm",
 			&img->img_width, &img->img_height);
-	img->img_collectable = mlx_xpm_file_to_image(img->mlx_ptr, "img/collectable.xpm",
+	img->img_coin = mlx_xpm_file_to_image(img->mlx_ptr, "img/coin.xpm",
 			&img->img_width, &img->img_height);
 	img->img_pface = mlx_xpm_file_to_image(img->mlx_ptr, "img/face.xpm",
 			&img->img_width, &img->img_height);

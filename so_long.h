@@ -6,12 +6,13 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 16:53:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/03/01 13:35:57 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:27:06 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
+#define TILE_SIZE 60
 
 # include <stdio.h>
 # include <unistd.h>
@@ -19,8 +20,6 @@
 # include <limits.h>
 # include <fcntl.h>
 # include <mlx.h>
-
-#define TILE_SIZE 60
 
 typedef struct s_data
 {
@@ -39,7 +38,7 @@ typedef struct s_data
 	int		img_height;
 	int		count;
 	char	**lines;
-	void    *img_collectable;
+	void	*img_coin;
 }		t_data;
 
 typedef struct p_pos
@@ -70,7 +69,7 @@ void	animation(t_data *img);
 // void	portal_an(t_data *img);
 int		map_len(char **lines);
 int		line_len(char *lines);
-int		collectable_checker(char **lines);
+int		coin_checker(char **lines);
 void	open_door(char **lines, t_data *map);
 int		find_exit(char **lines);
 void	len_check(char **lines);
@@ -78,7 +77,7 @@ void	floor_drawing(char **lines, t_data *img);
 void	ft_putnbr(int n);
 void	clearbuf(char **lines);
 void	write_err(char *str);
-void parssing(char **lines, char *maps);
+void	parssing(char **lines, char *maps);
 
 // BONUS
 

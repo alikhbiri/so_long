@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:28:41 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/27 10:10:33 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:17:55 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -35,7 +33,7 @@ static void	wall_draw_bonus(char **lines, t_data *img)
 	}
 }
 
-static void	collectable_draw_bonus(char **lines, t_data *img)
+static void	coin_draw_bonus(char **lines, t_data *img)
 {
 	int	j;
 	int	i;
@@ -49,7 +47,7 @@ static void	collectable_draw_bonus(char **lines, t_data *img)
 		{
 			if (lines[i][j] == 'C')
 				mlx_put_image_to_window(img->mlx_ptr,
-					img->win, img->img_collectable, j * 60, i * 60);
+					img->win, img->img_coin, j * 60, i * 60);
 			j++;
 		}
 		i++;
@@ -114,7 +112,7 @@ void	drawing_bonus(char *maps)
 	wall_draw_bonus(img.lines, &img);
 	door_draw_bonus(img.lines, &img);
 	player_draw_bonus(img.lines, &img);
-	collectable_draw_bonus(img.lines, &img);
+	coin_draw_bonus(img.lines, &img);
 	monster_draw_bonus(img.lines, &img);
 	mlx_hook(img.win, 2, 1, move_player_bonus, &img);
 	mlx_loop_hook(img.mlx_ptr, monster_move, &img);

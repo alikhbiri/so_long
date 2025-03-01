@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:28:48 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/27 10:10:39 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:18:25 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -35,7 +33,7 @@ void	wall_draw(char **lines, t_data *img)
 	}
 }
 
-void	collectable_draw(char **lines, t_data *img)
+void	coin(char **lines, t_data *img)
 {
 	int	j;
 	int	i;
@@ -49,7 +47,7 @@ void	collectable_draw(char **lines, t_data *img)
 		{
 			if (lines[i][j] == 'C')
 				mlx_put_image_to_window((img)->mlx_ptr,
-					(img)->win, (img)->img_collectable, j * 60, i * 60);
+					(img)->win, (img)->img_coin, j * 60, i * 60);
 			j++;
 		}
 		i++;
@@ -117,7 +115,7 @@ void	drawing(char *maps)
 	wall_draw(img.lines, &img);
 	door_draw(img.lines, &img);
 	player_draw(img.lines, &img);
-	collectable_draw(img.lines, &img);
+	coin(img.lines, &img);
 	mlx_hook(img.win, 2, 1, move_player, &img);
 	mlx_loop(img.mlx_ptr);
 }

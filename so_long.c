@@ -6,15 +6,13 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:42 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/19 16:52:46 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:28:06 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "so_long.h"
 
-void write_err(char *str)
+void	write_err(char *str)
 {
 	write(2, "Error\n", 6);
 	ft_putstr_fd(str, 2);

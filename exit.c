@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:29:06 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/20 15:56:28 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:18:46 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -40,7 +38,7 @@ int	find_exit(char **lines)
 	return (check);
 }
 
-int	collectable_checker(char **lines)
+int	coin_checker(char **lines)
 {
 	int	i;
 	int	j;

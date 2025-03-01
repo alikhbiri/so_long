@@ -6,11 +6,9 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:30:32 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/19 16:13:18 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:12:58 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -71,7 +69,7 @@ void	name_error(char *name)
 	ls = line_len(name) - 1;
 	if (name[ls] != 'r' || name[ls - 1] != 'e'
 		|| name[ls - 2] != 'b' || name[ls - 3] != '.')
-			write_err("Map extension must be '.ber'");
+		write_err("Map extension must be '.ber'");
 }
 
 static void	items_error(char **lines, int p, int e, int c)
