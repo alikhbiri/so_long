@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 16:53:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/27 15:03:31 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:35:57 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ t_data	putimage(t_data *img, void *mlx_ptr);
 int		move_player(int key, void *p);
 t_pos	player_pos(char **lines, int k);
 void	animation(t_data *img);
-void	portal_an(t_data *img);
+// void	portal_an(t_data *img);
 int		map_len(char **lines);
 int		line_len(char *lines);
 int		collectable_checker(char **lines);

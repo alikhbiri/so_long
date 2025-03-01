@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:28:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/02/27 15:03:49 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:38:09 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,40 +43,40 @@ void	an_loop(t_data *img, void *bp, char c)
 	}	
 }
 
-void	portal_an(t_data *img)
-{
-	static int	n;
-	void		*portal;
-	char		*file_n;
-	char		*path;
+// void	portal_an(t_data *img)
+// {
+// 	static int	n;
+// 	void		*portal;
+// 	char		*file_n;
+// 	char		*path;
 
-	n++;
-	file_n = ft_strjoin(ft_itoa(n), "p.xpm");
-	path = ft_strjoin("an/", file_n);
-	portal = mlx_xpm_file_to_image(img->mlx_ptr, path,
-			&img->img_width, &img->img_height);
-	if (n == 13)
-		n = 0;
-	an_loop(img, portal, 'Q');
-	free (file_n);
-	free (path);
-}
+// 	n++;
+// 	file_n = ft_strjoin(ft_itoa(n), "p.xpm");
+// 	path = ft_strjoin("an/", file_n);
+// 	portal = mlx_xpm_file_to_image(img->mlx_ptr, path,
+// 			&img->img_width, &img->img_height);
+// 	if (n == 13)
+// 		n = 0;
+// 	an_loop(img, portal, 'Q');
+// 	free (file_n);
+// 	free (path);
+// }
 
-void	animation(t_data *img)
-{
-	static int	n;
-	void		*bat;
-	char		*file_n;
-	char		*path;
+// void	animation(t_data *img)
+// {
+// 	static int	n;
+// 	// void		*bat;
+// 	char		*file_n;
+// 	char		*path;
 
-	n++;
-	file_n = ft_strjoin(ft_itoa(n), ".xpm");
-	path = ft_strjoin("an/", file_n);
-	bat = mlx_xpm_file_to_image(img->mlx_ptr, path,
-			&img->img_width, &img->img_height);
-	if (n == 8)
-		n = 0;
-	an_loop(img, bat, 'E');
-	free (file_n);
-	free (path);
-}
+// 	n++;
+// 	file_n = ft_strjoin(ft_itoa(n), ".xpm");
+// 	path = ft_strjoin("an/", file_n);
+// 	// bat = mlx_xpm_file_to_image(img->mlx_ptr, path,
+// 	// 		&img->img_width, &img->img_height);
+// 	if (n == 8)
+// 		n = 0;
+// 	// an_loop(img, bat, 'E');
+// 	free (file_n);
+// 	free (path);
+// }
