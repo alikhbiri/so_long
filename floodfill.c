@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:29:15 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/03/01 14:03:52 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/05 16:58:22 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char	*maps_s(char *line)
 		maps = ft_strjoin(maps, line);
 		free(line);
 	}
+	// while (1);
 	close(map);
 	return (maps);
 }
@@ -56,7 +57,7 @@ void	flood_test(char **lines)
 		while (lines[i][j])
 		{
 			if (lines[i][j] == 'E' || lines[i][j] == 'C')
-				write_err("no path to items ono path to items or exit");
+				write_err("non accessable path to items or exit");
 			j++;
 		}
 		i++;

@@ -6,13 +6,13 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 16:53:28 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/03/01 14:27:06 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/03 15:14:19 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-#define TILE_SIZE 60
+# define TILE_SIZE 60
 
 # include <stdio.h>
 # include <unistd.h>

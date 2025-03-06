@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:29:06 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/03/01 14:18:46 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/05 17:03:42 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,18 @@ void	open_door(char **lines, t_data *map)
 		}
 		i++;
 	}
+}
+#include "so_long.h"
+
+int	close_game(t_game *game)
+{
+	free_resources(game);
+	exit(0);
+}
+
+void	error_exit(t_game *game, char *message)
+{
+	ft_putendl_fd(message, 2);
+	free_resources(game);
+	exit(1);
 }

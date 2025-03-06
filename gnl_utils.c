@@ -6,7 +6,7 @@
 /*   By: alkhbiri <alkhbiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:29:52 by alkhbiri          #+#    #+#             */
-/*   Updated: 2025/03/01 14:06:21 by alkhbiri         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:42:17 by alkhbiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2[i])
 		str[j++] = s2[i++];
 	str[j] = '\0';
-	if (s1[0] != 'a')
-		free (s1);
+	free (s1);
 	return (str);
 }
 

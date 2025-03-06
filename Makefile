@@ -1,8 +1,8 @@
 NAME = so_long
 NAME_B = so_long_b
 
-CC = cc
-FLAGS = -Wall -Wextra -Werror -I$(MLX_DIR)
+CC = cc -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -I$(MLX_DIR) 
 
 # MiniLibX Paths
 MLX_DIR = minilibx-linux
